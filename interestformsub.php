@@ -86,53 +86,6 @@ echo "Thanks for submitting a location tracker! You'll now be receiving emails f
 
 echo "You've already submitted a location tracker!";
 }
-/*echo<<<END
-<html>
-<head>
- <script type="text/javascript"
-      src="http://maps.googleapis.com/maps/api/js?key=AIzaSyANHhEI6qKWiKuAXPHOGfcZWXjXCh1NV0c&sensor=false">
-</script>
- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-<script type = "text/javascript">
-var loc = $locrange;
-var json = $json;
-var geocoder = new google.maps.Geocoder();
-var BC = new google.maps.LatLng(42.3390925, -71.1812979); //west bounds set to BC
-var East = new google.maps.LatLng(42.3655468, -71.0290155); //east bounds set to right outside of Logan
-var bounds = new google.maps.LatLngBounds(BC, East);
-$(document).ready(function() {
-for (i = 0; i < $length; i++) {
-geocoder.geocode( { 'address': loc[i].address, 'bounds': bounds }, function(results, status) {
-      		if (status == google.maps.GeocoderStatus.OK) {
-			var cur = results[0].geometry.location;
-for (j = 0; j < $fill; j++) {
-	var first = new google.maps.LatLng(loc[j].firstlat, loc[j].firstlng);
-	var second = new google.maps.LatLng(loc[j].secondlat, loc[j].secondlng);
-	var curbounds = new google.maps.LatLngBounds(first, second);
-	if (curbounds.contains(cur)) {
-		 $.ajax({
-            type: "POST",
-            url: "http://ajaxinteractive.net/roomswap/simplesearch.php",
-            global: false,
-            data: { gendersearch: addres, gradsearch: $("#gradsearch:checked").val(), grouploc: $("#grouploc").val(), wantloc1: $("#wantloc1").val(), roomsize1: $("#roomsize1").val(), wantloc2: $("#wantloc2").val(), roomsize2: $("#roomsize2").val(), wantloc3: $("#wantloc3").val(), roomsize3: $("#roomsize3").val(), wantloc4: $("#wantloc4").val(), roomsize4: $("#roomsize4").val(), wantloc5: $("#wantloc5").val(), roomsize5: $("#roomsize5").val(), addresssearch: $("#addresssearch").val(), roomcapsearch : $("#roomcapsearch:checked").val(), generaldorm: $("#generaldorm").val(), genroom: $("#genroom").val(), otherz: $("#otherz:checked").val(), groupsearch: $("#groupsearch:checked").val(), list: $("#list").val()},
-            })
-            .done(function(data){
-                $("#results").html(data);
-                })
-            .fail(function(){
-            });
-	}
-	}
-	}
-      		});
-      }
-    });
-      		</script>
-      		</head>
-      		<body>
-      		</body>
-      		</html>
-END;*/
 include("include/footer.php");
 echo $footer;
 
