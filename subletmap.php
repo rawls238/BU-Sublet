@@ -69,6 +69,7 @@ else
 	}
 }
 
+//heck yea bubble sort!
 function bubble_sort($arr, $param) {
     $size = count($arr);
     for ($i=0; $i<$size; $i++) {
