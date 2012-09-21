@@ -2,7 +2,7 @@
 session_start();
 
 
-$db = new mysqli("subletinterest72.db.7681913.hostedresource.com", "subletinterest72", "BUcompsci123", "subletinterest72");
+$db = new mysqli(/*db information*/);
 if($db->connect_error){
   die ('Connect Error ('.$db->connect_errno.')'.$db->connect_error);
 }
